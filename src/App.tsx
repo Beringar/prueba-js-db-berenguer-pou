@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import Starship from "./types/Starship";
 import StarshipClass from "./types/StarshipClass";
 
-function App() {
+function App(): JSX.Element {
   const [starships, setStarships] = useState<Starship[]>([]);
   const [starShipClasses, setStarshipClasses] = useState<StarshipClass[]>([]);
+
+  const apiUrl: string = `${process.env.REACT_APP_STARWARS_API_URL}`;
 
   useEffect(() => {
     (async () => {
       const starshipsOutput: Starship[] = [];
-      let starships = await fetch("https://swapi.dev/api/starships");
+      let starships = await fetch(apiUrl);
       let starshipsAPI = await starships.json();
       starshipsOutput.push(...starshipsAPI.results);
       while (starshipsAPI.next) {
