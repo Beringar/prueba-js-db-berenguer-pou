@@ -24,3 +24,7 @@
   border-radius: 10px;
   color: white;
 }
+
+ul {
+  list-style: none;
+}
