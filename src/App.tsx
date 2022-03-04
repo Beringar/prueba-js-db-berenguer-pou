@@ -39,7 +39,7 @@ function App(): JSX.Element {
       });
       setStarshipClasses(starShipClassesOutput);
     })();
-  }, []);
+  }, [apiUrl]);
 
   return (
     <div id="background-container">
