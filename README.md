@@ -33,7 +33,7 @@ Posibles mejoras después del MVP requerido:
 
 A continuación, descripción de los scripts habituales de React para lanzar la aplicación en desarrollo, testear y hacer una build:
 
-**IMPORTANTE**: para lanzar el proyecto en local hay que crear un archivo .env en la root del proyecto con la siguiente var de entorno:
+**IMPORTANTE**: para lanzar el proyecto en local hay que crear un archivo .env (que he se ha ignorado lógicamente en el repositorio aunque sólo contenga la API URL de swapi.dev) en la root del proyecto con la siguiente var de entorno:
 `REACT_APP_STARWARS_API_URL=https://swapi.dev/api/starships`
 
 ## Available Scripts
