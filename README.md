@@ -12,7 +12,6 @@ Posibles mejoras después del MVP requerido:
 -- añadir más tests unitarios y modularizar el código JSX que devuelve el componente principal app.tsx en subcomponentes: por ejemplo--> StarshipsList y StarshipItem-
 -- extraer en módulos del tipo utils/helper las funciones que hacen las llamadas a la API swapi.dev. (para mejorar el testeo y potencialmente ampliar/escalar la app)
 
-
 ## Planteamiento del desarrollo:
 
 1. Toma de requirements del cliente descritos más arriba.
@@ -33,6 +32,9 @@ Posibles mejoras después del MVP requerido:
 - Posteriormente, a partir de los datos almacenados en un array 'starships', se van a almacenar los datos de las clases de naves y las cantidades rellenado el array starshipClasses con objetos del tipo {name, quantity}. Se puede proceder con un forEach y búsqueda de clases de nave ya existentes y acumular, o bien con un reducer sobre el array starships.
 
 A continuación, descripción de los scripts habituales de React para lanzar la aplicación en desarrollo, testear y hacer una build:
+
+**IMPORTANTE**: para lanzar el proyecto en local hay que crear un archivo .env en la root del proyecto con la siguiente var de entorno:
+`REACT_APP_STARWARS_API_URL=https://swapi.dev/api/starships`
 
 ## Available Scripts
 
