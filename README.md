@@ -1,4 +1,4 @@
-# Prueba técnica JS Dinbeat
+# Prueba técnica JS para db
 
 Developer: Berenguer Pou
 
