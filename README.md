@@ -8,9 +8,10 @@ Se pide que mediante la API de Star Wars proporcionada, se listen por un lado el
 
 Ampliación sobre el requerimento de la prueba: se realizará la app en React y con TS.
 
-Posibles mejoras después del MVP requerido: 
--- añadir más tests unitarios y modularizar el código JSX que devuelve el componente principal app.tsx en subcomponentes: por ejemplo--> StarshipsList y StarshipItem-
--- extraer en módulos del tipo utils/helper las funciones que hacen las llamadas a la API swapi.dev. (para mejorar el testeo y potencialmente ampliar/escalar la app)
+**Posibles mejoras después del MVP requerido:** 
+- añadir más tests unitarios y modularizar el código JSX que devuelve el componente principal app.tsx en subcomponentes: por ejemplo--> StarshipsList y StarshipItem-
+- extraer en módulos del tipo utils/helper las funciones que hacen las llamadas a la API swapi.dev. (para mejorar el testeo y potencialmente ampliar/escalar la app)
+- realizar las requests a la páginas 2 y siguientes con la web API PromiseAll para lanzar las requests a la API swapi en paralelo y optimizar el tiempo de carga de los resultados.
 
 ## Planteamiento del desarrollo:
 
