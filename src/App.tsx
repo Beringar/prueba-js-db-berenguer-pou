@@ -44,20 +44,24 @@ function App(): JSX.Element {
   return (
     <div id="background-container">
       <header id="header-title">Star Wars Test</header>
-      <main id="main-container">
-        <h2>Starships:</h2>
-        <p id="total-ships">Total ships: {starships.length}</p>
-        <h2>Starships by class:</h2>
-        <ul>
-          {starShipClasses.map((starShipClass) => (
-            <li
-              key={starShipClass.name}
-            >{`${starShipClass.name[0].toUpperCase()}${starShipClass.name.slice(
-              1
-            )}: ${starShipClass.quantity}`}</li>
-          ))}
-        </ul>
-      </main>
+      {!starships.length ? (
+        <header id="header-title">Loading data...</header>
+      ) : (
+        <main id="main-container">
+          <h2>Starships:</h2>
+          <p id="total-ships">Total ships: {starships.length}</p>
+          <h2>Starships by class:</h2>
+          <ul>
+            {starShipClasses.map((starShipClass) => (
+              <li
+                key={starShipClass.name}
+              >{`${starShipClass.name[0].toUpperCase()}${starShipClass.name.slice(
+                1
+              )}: ${starShipClass.quantity}`}</li>
+            ))}
+          </ul>
+        </main>
+      )}
     </div>
   );
 }
