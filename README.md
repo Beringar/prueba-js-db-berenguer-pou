@@ -1,6 +1,38 @@
-# Getting Started with Create React App
+# Prueba técnica JS Dinbeat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Developer: Berenguer Pou
+
+(Tiempo máximo: 120 minutos)
+Partiendo del material dado, añade en el archivo “js/main.js” el Código (javascript / ECMAscript) que consideres necesario para conseguir el resultado mostrado más abajo.
+Se pide que mediante la API de Star Wars proporcionada, se listen por un lado el total de naves (starships) y por otro se agrupen por clase (starship_class), listando las clases de nave existentes y cuantas hay de cada clase.
+
+Ampliación sobre el requerimento de la prueba: se realizará la app en React y con TS.
+
+Posibles mejoras después del MVP requerido: 
+-- añadir más tests unitarios y modularizar el código JSX que devuelve el componente principal app.tsx en subcomponentes: por ejemplo--> StarshipsList y StarshipItem-
+-- extraer en módulos del tipo utils/helper las funciones que hacen las llamadas a la API swapi.dev. (para mejorar el testeo y potencialmente ampliar/escalar la app)
+
+
+## Planteamiento del desarrollo:
+
+1. Toma de requirements del cliente descritos más arriba.
+2. Inspección de la API swapi.dev:
+- Resultados:
+-- Se observa que existe un endpoint '/api/starships' que nos ofrece el listado de datos que necesitamos para la app.
+-- Se observa que la API devuelve un listado con paginación de 10 resultados por página.
+-- La API ofrece una propiedad 'count' con el número total de items 'Starship'.
+-- La API despliega la paginación de resultados con un procedimento standard que nos ofrece los endpoints 'previous' y 'next' en cada llamada (para los 10 resultados anteriores o posteriores a la current request, respectivamente).
+3. Definición del stack que usaré en la app:
+-- Definiré un proyecto React con TS inicializando la app con la utilidad CRA añadiendo la configuración para Typescript.
+-- Se incluirán los estilos CSS proporcionados en los estilos globlaes de la app.
+4. Puntos básicos del desarrollo / lógica
+-- Se describirán dos interfaces para los tipos de datos 'Starship' y 'StarShipClass'. 
+-- Se gestionarán los datos en hooks useState de React para alamcenar un array de Starships, del que sólo necesitaré su length para mostrar en la UI el número total de Starships, y otra variable de estado 'starshipClasses' para almacenar los datos principales de clases de tipos de starship y sus cantidades, que también se debarán mostrar dinámicamente en la UI.
+-- Se implementará dentro de un hook useEffect la gestión asíncrona de la petición de datos a la API.
+-- Para la obtención de todos los resultados, optaré por llamadas asíncronas en secuencia (para cada página de resultados) mediante la API 'fetch'. Se programará una iteración mediante un loop while hasta que el endpoint 'next' retorne null, lo que nos indicará que no existen más resultados y que el listado ya ha sido obtenido en su totalidad.
+-- Posteriormente, a partir de los datos almacenados en un array 'starships', se van a almacenar los datos de las clases de naves y las cantidades rellenado el array starshipClasses con objetos del tipo {name, quantity}. Se puede proceder con un forEach y búsqueda de clases de nave ya existentes y acumular, o bien con un reducer sobre el array starships.
+
+A continuación, descripción de los scripts habituales de React para lanzar la aplicación en desarrollo, testear y hacer una build:
 
 ## Available Scripts
 
