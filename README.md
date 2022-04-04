@@ -6,7 +6,7 @@ Developer: Berenguer Pou
 Partiendo del material dado, añade en el archivo “js/main.js” el Código (javascript / ECMAscript) que consideres necesario para conseguir el resultado mostrado más abajo.
 Se pide que mediante la API de Star Wars proporcionada, se listen por un lado el total de naves (starships) y por otro se agrupen por clase (starship_class), listando las clases de nave existentes y cuantas hay de cada clase.
 
-Ampliación sobre el requerimento de la prueba: se realizará la app en React y con TS.
+Ampliación sobre el requerimento de la prueba: __se realizará la app en React y con TS.__
 
 **Posibles mejoras después del MVP requerido:** 
 - añadir más tests unitarios y modularizar el código JSX que devuelve el componente principal app.tsx en subcomponentes: por ejemplo--> StarshipsList y StarshipItem-
